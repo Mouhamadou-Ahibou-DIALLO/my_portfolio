@@ -3,47 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Étudiant</title>
+  <title>Portfolio MAD</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="images/moi.png" alt="Photo de moi" class="photo">
-    <h1>Ton Nom</h1>
-    <p>Étudiant en Informatique | Développement, IA, Robotique</p>
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">MAD</div>
+    <nav>
+      <ul>
+        <li><a href="#presentation">À propos de moi</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#diplomes">Diplômes</a></li>
+        <li><a href="#projets">Portfolio</a></li>
+        <li><a href="#references">Références</a></li>
+        <li><a href="#contact">Me contacter</a></li>
+        <li><a href="cv.pdf" target="_blank">CV</a></li>
+        <li>
+          <select id="lang-select">
+            <option value="fr">🇫🇷 FR</option>
+            <option value="en">🇬🇧 EN</option>
+            <option value="es">🇪🇸 ES</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
   </header>
 
+  <!-- SECTIONS -->
   <section id="presentation">
     <h2>À propos de moi</h2>
-    <p>Je suis étudiant en informatique passionné par le développement logiciel, 
-    l’intelligence artificielle et les projets innovants. 
-    J’aime apprendre et créer des solutions utiles.</p>
+    <p>Je suis étudiant en informatique passionné par le développement logiciel et l’IA.</p>
+  </section>
+
+  <section id="competences">
+    <h2>Compétences</h2>
+    <ul>
+      <li>Java, Python, C</li>
+      <li>Spring Boot, Flask, Rasa</li>
+      <li>Linux, Git, Docker</li>
+    </ul>
+  </section>
+
+  <section id="diplomes">
+    <h2>Diplômes</h2>
+    <p>Bachelor / Master en Informatique (en cours).</p>
   </section>
 
   <section id="projets">
-    <h2>Mes projets</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Chatbot avec Rasa</h3>
-        <p>Un chatbot intelligent en français, intégré avec un robot Pepper.</p>
-        <a href="https://github.com/tonpseudo/chatbot-rasa" target="_blank">Voir le projet</a>
-      </div>
-      <div class="card">
-        <h3>API Spring Boot</h3>
-        <p>Une API REST de transformation d’images avec gestion d’utilisateurs.</p>
-        <a href="https://github.com/tonpseudo/api-images" target="_blank">Voir le projet</a>
-      </div>
-      <div class="card">
-        <h3>Site immobilier JavaFX</h3>
-        <p>Application desktop pour gérer un site immobilier avec JavaFX.</p>
-        <a href="https://github.com/tonpseudo/javafx-immo" target="_blank">Voir le projet</a>
-      </div>
-    </div>
+    <h2>Portfolio</h2>
+    <p>Ici viendront tes projets avec images et liens GitHub.</p>
+  </section>
+
+  <section id="references">
+    <h2>Références</h2>
+    <p>Références ou recommandations (professeurs, encadrants, collègues...).</p>
+  </section>
+
+  <section id="contact">
+    <h2>Me contacter</h2>
+    <p>📧 tonmail@example.com | 🌐 <a href="https://github.com/tonpseudo">GitHub</a></p>
   </section>
 
   <footer>
-    <p>📧 tonmail@example.com | 🌐 <a href="https://github.com/tonpseudo" target="_blank">GitHub</a> | 💼 <a href="https://linkedin.com/in/tonlinkedin" target="_blank">LinkedIn</a></p>
+    <p>&copy; 2025 MAD | Portfolio étudiant</p>
   </footer>
+
+  <script>
+    document.getElementById("lang-select").addEventListener("change", function() {
+      const lang = this.value;
+      alert("Traduction vers : " + lang + " (fonctionnalité à implémenter 🚀)");
+    });
+  </script>
 </body>
 </html>
 
