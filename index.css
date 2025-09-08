@@ -146,3 +146,177 @@ footer {
   }
 }
 
+/* ===== SCROLL DOUX ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== HERO ===== */
+#hero {
+  height: 100vh; /* pleine hauteur de l’écran */
+  background: url("images/hero.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); /* filtre sombre */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: #00d4ff;
+}
+
+.hero-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===== SECTIONS ALTERNÉES ===== */
+section:nth-child(even) {
+  background: #f9f9f9;
+}
+
+section:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* ===== GRILLES COMPÉTENCES ===== */
+#competences ul,
+#soft-skill ul,
+#passion ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+#competences li,
+#soft-skill li,
+#passion li {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+#competences li:hover,
+#soft-skill li:hover,
+#passion li:hover {
+  transform: scale(1.05);
+}
+
+/* ===== TIMELINE DIPLÔMES ===== */
+#diplomes {
+  position: relative;
+  padding-left: 40px;
+}
+
+#diplomes::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #00d4ff;
+  border-radius: 2px;
+}
+
+#diplomes section {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#diplomes h3 {
+  color: #00d4ff;
+}
+
+#diplomes section::before {
+  content: "🎓";
+  position: absolute;
+  left: -40px;
+  background: #00d4ff;
+  color: white;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== PORTFOLIO CARTES ===== */
+#projets section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+#projets section:hover {
+  transform: translateY(-5px);
+}
+
+#projets h3 {
+  color: #00d4ff;
+}
+
+#projets a {
+  display: inline-block;
+  margin-top: 10px;
+  background: #00d4ff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+#projets a:hover {
+  background: #0099cc;
+}
+
+/* ===== CONTACT ===== */
+#contact {
+  text-align: left;
+  background: white;
+  color: black;
+  padding: 50px 20px;
+  border-radius: 10px;
+}
+
+#contact a {
+  color: #00d4ff;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
